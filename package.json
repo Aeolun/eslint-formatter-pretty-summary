@@ -1,20 +1,27 @@
 {
-	"name": "eslint-formatter-pretty",
-	"version": "4.0.0",
-	"description": "Pretty ESLint formatter",
+	"name": "eslint-formatter-pretty-summary",
+	"version": "1.0.3",
+	"description": "Pretty ESLint summary formatter",
 	"license": "MIT",
-	"repository": "sindresorhus/eslint-formatter-pretty",
-	"funding": "https://github.com/sponsors/sindresorhus",
-	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "https://sindresorhus.com"
-	},
+	"repository": "aeolun/eslint-formatter-pretty-summary",
+	"funding": "https://github.com/sponsors/aeolun",
+	"authors": [
+		{
+			"name": "Sindre Sorhus",
+			"email": "sindresorhus@gmail.com",
+			"url": "https://sindresorhus.com"
+		},
+		{
+			"name": "Bart Riepe",
+			"email": "bart.riepe@serial-experiments.com",
+			"url": "https://serial-experiments.com"
+		}
+	],
 	"engines": {
 		"node": ">=10"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "ava"
 	},
 	"files": [
 		"index.js"
@@ -23,6 +30,7 @@
 		"eslint",
 		"eslint-formatter",
 		"formatter",
+		"summary",
 		"reporter",
 		"lint",
 		"validate"

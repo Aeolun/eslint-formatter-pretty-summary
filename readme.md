@@ -1,82 +1,32 @@
-# eslint-formatter-pretty [![Build Status](https://travis-ci.com/sindresorhus/eslint-formatter-pretty.svg?branch=master)](https://travis-ci.com/github/sindresorhus/eslint-formatter-pretty)
+# eslint-formatter-pretty-summary
 
-> Pretty formatter for [ESLint](https://eslint.org)
+> Pretty summary formatter for [ESLint](https://eslint.org)
 
-![](screenshot.png)
+Meant for those projects where there are too many warnings to use the full pretty formatter.
+
+![](preview.png)
 
 ## Highlights
 
 - Pretty output.
-- Sorts results by severity.
+- Only displays full results for errors
+- Summarizes non-error results
 - Stylizes inline codeblocks in messages.
 - Command-click a rule ID to open its docs.
-- Command-click a header to reveal the first error in your editor. *(iTerm-only)*
+- Command-click a header to reveal the first error in your editor. _(iTerm-only)_
 
 ## Install
 
 ```
-$ npm install --save-dev eslint-formatter-pretty
+$ npm install --save-dev eslint-formatter-pretty-summary
 ```
 
 ## Usage
 
-### [XO](https://github.com/xojs/xo)
-
-Nothing to do. It's the default formatter.
-
 ### ESLint CLI
 
 ```
-$ eslint --format=pretty file.js
-```
-
-### [grunt-eslint](https://github.com/sindresorhus/grunt-eslint)
-
-```js
-grunt.initConfig({
-	eslint: {
-		target: ['file.js'].
-		options: {
-			format: 'pretty'
-		}
-	}
-});
-
-grunt.loadNpmTasks('grunt-eslint');
-grunt.registerTask('default', ['eslint']);
-```
-
-### [gulp-eslint](https://github.com/adametry/gulp-eslint)
-
-```js
-const gulp = require('gulp');
-const eslint = require('gulp-eslint');
-
-gulp.task('lint', () =>
-	gulp.src('file.js')
-		.pipe(eslint())
-		.pipe(eslint.format('pretty'))
-);
-```
-
-### [eslint-loader](https://github.com/MoOx/eslint-loader) *(webpack)*
-
-```js
-module.exports = {
-	entry: ['file.js'],
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: 'eslint-loader',
-				options: {
-					formatter: require('eslint-formatter-pretty')
-				}
-			}
-		]
-	}
-};
+$ eslint --format=pretty-summary file.js
 ```
 
 ## Tips
